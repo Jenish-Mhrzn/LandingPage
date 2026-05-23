@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { MyContext } from "../context/Context";
 import picture from "../assets/picture.png";
+import ImageAutoplay from "../page/ImageAutoplay";
 
 const Hero = () => {
   const { theme } = useContext(MyContext);
@@ -19,9 +20,7 @@ const Hero = () => {
         </div>
         <div className="uppercase flex flex-col items-center mt-6 text-neutral-500 text-[0.6rem] sm:text-xs md:text-base">
           <p>We roar with success, delivering the TRIONN®</p>
-          <p className="pr-2">
-            through versatile design, branding and the latest
-          </p>
+          <p>through versatile design, branding and the latest</p>
           <p>tech development to companies.</p>
         </div>
       </div>
@@ -43,11 +42,7 @@ const Hero = () => {
           Explore work
         </button>
 
-        <div
-          className={`${borderColor} w-24 h-16 sm:w-36 sm:h-24 md:w-48 md:h-32 rounded-full overflow-hidden border`}
-        >
-          <img src={picture} className="w-full h-full object-cover" />
-        </div>
+        <ImageAutoplay />
 
         <button
           className={`${borderColor} border-2 rounded-full py-1.5 px-4 sm:py-2 sm:px-6 md:py-3 md:px-8 text-sm md:text-base cursor-pointer`}
